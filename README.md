@@ -6,7 +6,7 @@
 
   
 
-![image](./src/assets/images/ScreenShot.png)
+![image](./OSPF-topo.png)
 ## Built With
 - HTML & CSS & JavaScript
 - Html, Css & JavaScript linters
