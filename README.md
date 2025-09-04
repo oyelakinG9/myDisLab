@@ -1,11 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # MyDisLab
 
-
-
-
-
-
 ![image](./OSPF-topo.png)
 ## Built With
 
@@ -14,10 +9,6 @@
 - EVE-NG
 - Wireshark
 - Iperf3
-- One Client Machine
-- One Server Machine
-
-
 ## Live Demo
 > ###### [LIVE DEMO LINK](https://172.16.14.2/legacy/Users/KinG/MyDisLab1.unl/topology/)
 
