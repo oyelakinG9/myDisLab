@@ -4,36 +4,32 @@
 
 
 
-  
+
 
 ![image](./OSPF-topo.png)
 ## Built With
-- HTML & CSS & JavaScript
-- Html, Css & JavaScript linters
+
+- Five Cisco vIOS routers
+- Two Cisco 93000 switches 
+- EVE-NG
+- Wireshark
+- Iperf3
+- One Client Machine
+- One Server Machine
+
+
 ## Live Demo
-> ###### [LIVE DEMO LINK](https://aimemalaika.github.io/awesome-tv/)
+> ###### [LIVE DEMO LINK](https://172.16.14.2/legacy/Users/KinG/MyDisLab1.unl/topology/)
 
 ## Video Demo
 > ###### [VIDEO DEMO LINK](https://www.loom.com/share/7c667355a904437b80cff2848cc4d39e)
 ##### Getting Started
 - clone the repository by running\
-    `git clone https://github.com/aimemalaika/awesome-tv.git`
+    `https://github.com/oyelakinG9/myDisLab.git`
 - navigate to the folder\
-    `cd awesome-tv`
-- Install packages\
-    `npm install`
-- Run the app\
-    `npm start`
-- Create build app\
-    `npm run build`
-- Test Linters app\
-    `npm run check-linters`
-## Authors 
+    `cd myDisLab`
 
-👤 **Aime Malaika**
-- GitHub: [@aimemalaika](https://github.com/aimemalaika)
-- Twitter: [@aimemalaika](https://twitter.com/Aime_Malaika)
-- LinkedIn: [aimemalaika](https://linkedin.com/in/aimemalaika)
+## Authors
 
 👤 **Oyelakin Ridwan Adio**
 - GitHub: [@oyelakin](https://github.com/oyelakinG9)
