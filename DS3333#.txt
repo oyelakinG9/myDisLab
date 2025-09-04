@@ -1,16 +1,18 @@
-DS1111#sh run
+DS3333#
+*Sep  2 13:11:50.583: %SYS-5-CONFIG_I: Configured from console by console run
+DS3333#sh running-config 
 Building configuration...
 
-Current configuration : 3175 bytes
+Current configuration : 3238 bytes
 !
-! Last configuration change at 17:00:21 UTC Thu Aug 28 2025
+! Last configuration change at 13:11:50 UTC Tue Sep 2 2025
 !
 version 15.9
 service timestamps debug datetime msec
 service timestamps log datetime msec
 no service password-encryption
 !
-hostname DS1111
+hostname DS3333
 !
 boot-start-marker
 boot-end-marker
@@ -46,8 +48,8 @@ multilink bundle-name authenticated
 !
 !
 redundancy
-!         
 !
+!         
 ! 
 !
 !
@@ -62,28 +64,31 @@ redundancy
 !
 !
 interface GigabitEthernet0/0
- ip address 192.168.10.1 255.255.255.0
+ ip address 172.16.10.21 255.255.255.252
  ip router isis 
  duplex auto
  speed auto
  media-type rj45
- isis circuit-type level-1
+ isis circuit-type level-2-only
 !
 interface GigabitEthernet0/1
- ip address 172.16.10.14 255.255.255.252
+ ip address 10.0.100.2 255.255.255.0
  ip router isis 
+ standby 100 ip 10.0.100.3
+ standby 100 priority 105
+ standby 100 preempt
  duplex auto
  speed auto
  media-type rj45
  isis circuit-type level-1
 !
 interface GigabitEthernet0/2
- ip address 172.16.10.10 255.255.255.252
+ ip address 172.16.10.5 255.255.255.252
  ip router isis 
  duplex auto
  speed auto
  media-type rj45
- isis circuit-type level-1
+ isis circuit-type level-2-only
 !
 interface GigabitEthernet0/3
  no ip address
@@ -93,8 +98,7 @@ interface GigabitEthernet0/3
  media-type rj45
 !
 router isis
- net 49.0001.0000.0000.0003.00
- is-type level-1
+ net 49.0002.0000.0000.0002.00
 !
 ip forward-protocol nd
 !

@@ -1,16 +1,17 @@
-DS1111#sh run
+CR2222#
+*Sep  2 12:53:55.168: %SYS-5-CONFIG_I: Configured from console by console run
 Building configuration...
 
-Current configuration : 3175 bytes
+Current configuration : 3168 bytes
 !
-! Last configuration change at 17:00:21 UTC Thu Aug 28 2025
+! Last configuration change at 12:53:55 UTC Tue Sep 2 2025
 !
 version 15.9
 service timestamps debug datetime msec
 service timestamps log datetime msec
 no service password-encryption
 !
-hostname DS1111
+hostname CR2222
 !
 boot-start-marker
 boot-end-marker
@@ -62,15 +63,15 @@ redundancy
 !
 !
 interface GigabitEthernet0/0
- ip address 192.168.10.1 255.255.255.0
+ ip address 172.16.10.17 255.255.255.252
  ip router isis 
  duplex auto
  speed auto
  media-type rj45
- isis circuit-type level-1
+ isis circuit-type level-2-only
 !
 interface GigabitEthernet0/1
- ip address 172.16.10.14 255.255.255.252
+ ip address 172.16.10.13 255.255.255.252
  ip router isis 
  duplex auto
  speed auto
@@ -78,12 +79,12 @@ interface GigabitEthernet0/1
  isis circuit-type level-1
 !
 interface GigabitEthernet0/2
- ip address 172.16.10.10 255.255.255.252
+ ip address 172.16.10.6 255.255.255.252
  ip router isis 
  duplex auto
  speed auto
  media-type rj45
- isis circuit-type level-1
+ isis circuit-type level-2-only
 !
 interface GigabitEthernet0/3
  no ip address
@@ -93,8 +94,7 @@ interface GigabitEthernet0/3
  media-type rj45
 !
 router isis
- net 49.0001.0000.0000.0003.00
- is-type level-1
+ net 49.0001.0000.0000.0005.00
 !
 ip forward-protocol nd
 !
@@ -135,11 +135,11 @@ banner login ^CCC
 * purposes is expressly prohibited except as otherwise authorized by     *
 * Cisco in writing.                                                      *
 **************************************************************************^C
-!
+!         
 line con 0
 line aux 0
 line vty 0 4
- login
+ login    
  transport input none
 !
 no scheduler allocate
